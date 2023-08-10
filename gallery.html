@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Proyectos decoración</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230810121458">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-fp-menu class="header">
+			<div class="header__container">
+				<ul class="menu__socials socials">
+					<li class="socials__item"><a target="_blank" href="https://api.whatsapp.com/send?phone=686233332&text=En%20que%20puedo%20ayudarte?" class="socials__link _icon-whattsup"></a></li>
+					<li class="socials__item"><a target="_blank" href="https://www.instagram.com/linterior.lmg/?hl=es" class="socials__link _icon-instagram"></a></li>
+					<li class="socials__item"><a target="_blank" href="https://www.pinterest.es/lidiamgfengshui/_saved/" class="socials__link _icon-pinterest"></a></li>
+					<li class="socials__item"><a target="_blank" href="https://www.linkedin.com/in/l%C2%B4interior-interiorismo-emocional-6386b3236/" class="socials__link _icon-linkedin"></a></li>
+				</ul>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="javascript:history.back()" class="menu__link">Volver</a></li>
+							<li class="menu__item"><a href="./index.html" class="menu__link">Pagina principal</a></li>
+							<li class="menu__item"><a href="#" data-popup="#popup-contact" class="menu__link contact-link">Contactar</a></li>
+						</ul>
+					</nav>
+				</div>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+			</div>
+		</header>
+
+		<main class="page">
+			<section data-watch class="page__gallery gallery">
+				<h1 class="gallery__title title"></h1>
+				<div class="gallery__imgs" data-gallery></div>
+			</section>
+		</main>
+	</div>
+	<script>
+		const storedProjectPhotos = localStorage.getItem('projectPhotos');
+		const projectPhotos1 = JSON.parse(storedProjectPhotos);
+	</script>
+	<div id="popup-contact" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__img-ibg">
+					<picture><source srcset="img/popup/popup-main.webp" type="image/webp"><img src="img/popup/popup-main.jpg" alt="Send message image" /></picture>
+				</div>
+				<form class="popup__form form-popup" action="#">
+					<div class="form-popup__row">
+						<input class="form-popup__name" data-required type="text" name="name" placeholder="Nombre" />
+						<input class="form-popup__email" data-required="email" type="text" name="form[email]" placeholder="E-mail" class="input" />
+					</div>
+					<input data-required class="form-popup__subject" type="text" name="subject" placeholder="Asunto" />
+					<textarea data-required data-autoheight class="form-popup__message" type="text" name="message" placeholder="escribe tu mensaje aquí"></textarea>
+					<button type="submit" class="button">Enviar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup-show-image" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__img-ibg _contain">
+					<img src="" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- files/sendmail/sendmail.php  method="POST"-->
+	<script src="js/app.min.js?_v=20230810121458"></script>
+</body>
+
+</html>
